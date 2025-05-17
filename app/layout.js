@@ -41,8 +41,8 @@ export default function RootLayout({ children }) {
     >
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased animated-dotted-background`}
+       suppressHydrationWarning>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

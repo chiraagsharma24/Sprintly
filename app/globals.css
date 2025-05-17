@@ -120,3 +120,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+.animated-dotted-background {
+  background-color: #0a111f;
+  background-image: radial-gradient(#4a5568 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@layer utilities {
+  .gradient-title {
+    @apply font-extrabold bg-gradient-to-br from-blue-500 via-blue-100 to-blue-400 bg-clip-text tracking-tighter text-transparent pr-2 pb-2;
+  }
+
+  .highlight-sprintly {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+  }
+}
+
+.wmde-markdown ul {
+  list-style-type: disc;
+  padding-left: 15px !important;
+  color: white;
+}
