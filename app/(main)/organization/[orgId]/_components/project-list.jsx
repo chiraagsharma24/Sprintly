@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { getProjects } from "@/actions/organizations";
-// import DeleteProject from "./delete-project";
+import DeleteProject from "./delete-project";
 
 export default async function ProjectList({ orgId }) {
   const projects = await getProjects(orgId);
@@ -28,11 +28,13 @@ export default async function ProjectList({ orgId }) {
           <CardHeader>
             <CardTitle className="flex justify-between items-center">
               {project.name}
-              {/* <DeleteProject projectId={project.id} /> */}
+              <DeleteProject projectId={project.id} />
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-500 mb-4">{project.description}</p>
+            <p className="text-sm text-gray-500 mb-4 line-clamp-3">
+  {project.description}
+</p>
             <Link
               href={`/project/${project.id}`}
               className="text-blue-500 hover:underline"
