@@ -22,8 +22,14 @@ export async function getOrganization(slug) {
   const { data: orgs } = await clerk.organizations.getOrganizationList({
     slug,
   });
+ 
+  let organization = orgs[0] ?? null;
 
-  const organization = orgs[0] ?? null;
+  for (let i=0 ; i<orgs.length ; i++){
+    if (orgs[i].slug === slug){
+      organization = orgs[i] ;
+    }
+  }
   if (!organization) {
     return null;
   }
@@ -42,4 +48,26 @@ export async function getOrganization(slug) {
   }
 
   return organization;
+}
+
+export async function getProjects(orgId) {
+  const { userId } = await auth();
+  if (!userId) {
+    throw new Error("Unauthorized");
+  }
+
+  const user = await db.user.findUnique({
+    where: { clerkUserId: userId },
+  });
+
+  if (!user) {
+    throw new Error("User not found");
+  }
+
+  const projects = await db.project.findMany({
+    where: { organizationId: orgId },
+    orderBy: { createdAt: "desc" },
+  });
+
+  return projects;
 }
