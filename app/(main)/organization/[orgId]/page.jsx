@@ -2,6 +2,7 @@ import { getOrganization } from "@/actions/organizations";
 import OrgSwitcher from "@/components/org-switcher";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import ProjectList from "./_components/project-list";
 
 export default async function OrganizationPage({ params }) {
 
@@ -12,6 +13,8 @@ export default async function OrganizationPage({ params }) {
   const { orgId } = await params;
 
   const organization = await getOrganization(orgId);
+
+  // console.log(organization) ;
 
   if (!organization) {
     return <div>Organization not found or access denied</div>;
@@ -27,7 +30,7 @@ export default async function OrganizationPage({ params }) {
         <OrgSwitcher />
       </div>
       <div className="mb-4">
-        {/* <ProjectList orgId={organization.id} /> */}
+        <ProjectList orgId={organization.id} />
       </div>
       <div className="mt-8">
         {/* <UserIssues userId={userId} /> */}
