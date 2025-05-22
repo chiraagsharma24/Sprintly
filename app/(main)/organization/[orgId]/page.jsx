@@ -9,7 +9,9 @@ export default async function OrganizationPage({ params }) {
   if (!userId) {
     redirect("/sign-in");
   }
-  const organization = await getOrganization(params.orgId);
+  const { orgId } = await params;
+
+  const organization = await getOrganization(orgId);
 
   if (!organization) {
     return <div>Organization not found or access denied</div>;
