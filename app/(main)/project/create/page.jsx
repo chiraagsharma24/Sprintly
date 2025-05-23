@@ -95,7 +95,7 @@ export default function CreateProjectPage() {
             id="key"
             {...register("key")}
             className="bg-slate-950"
-            placeholder="Project Key (Ex: CSPT)"
+            placeholder="Project Key (Ex: RCYT)"
           />
           {errors.key && (
             <p className="text-red-500 text-sm mt-1">{errors.key.message}</p>
