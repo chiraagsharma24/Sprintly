@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import MDEditor from "@uiw/react-md-editor";
-import UserAvatar from "../user-avatar";
+import UserAvatar from "./user-avatar";
 import useFetch from "@/hooks/use-fetch";
 import { useOrganization, useUser } from "@clerk/nextjs";
 import {

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { formatDistanceToNow } from "date-fns";
 import IssueDetailsDialog from "./issue-details-dialog";
-import UserAvatar from "../user-avatar";
+import UserAvatar from "./user-avatar";
 import { useRouter } from "next/navigation";
 
 const priorityColor = {
