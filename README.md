@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏃 Sprintly
 
-## Getting Started
+**Streamline Your Workflow with Sprintly**  
+Empower your team with our intuitive, full-stack project management solution tailored for modern software teams.
 
-First, run the development server:
+Sprintly simplifies how you manage tasks, sprints, and organizations. Whether you're a startup, a freelancer, or a growing team, Sprintly gives you the flexibility to break down complex projects into manageable sprints and visualize your team's progress with a clean Kanban interface. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+### 🔗 Live Demo
+[Check it out here](https://sprintly-opal.vercel.app)
+
+-----
+
+### 🎥 Recorded Demo Video
+[Watch the demo](https://your-demo-video-link.com)
+
+---
+
+## 🚀 Features
+
+- 🏢 Create and manage multiple **Organizations**
+- 📁 Each organization can handle **multiple Projects**
+- 🔄 Projects are divided into **Sprints** for better planning and iteration
+- 📝 Inside each sprint, create and manage issues across four categories:
+  - ✅ Todo
+  - 🚧 In Progress
+  - 🕵️ In Review
+  - ✔️ Done
+- 🧩 **Kanban Board** with drag-and-drop functionality for smooth task management
+- 👥 User authentication with Clerk (Sign in / Sign up / Onboarding)
+- 🌗 Clean, responsive, and accessible UI with **Dark Mode** support
+- 📊 Scalable data management with PostgreSQL on **NeonDB**
+- 📦 Optimized state handling with built-in server actions (Next.js App Router)
+- ⚡ Blazing fast and modern UI with **Shadcn UI** + **Tailwind CSS**
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js, Next.js (App Router), Tailwind CSS, Shadcn UI  
+- **Backend:** Next.js Server Actions  
+- **Authentication:** Clerk  
+- **Database:** PostgreSQL via NeonDB  
+- **Deployment:** Vercel / Your preferred platform
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root and add the following:
+
+```env
+# PostgreSQL (NeonDB)
+DATABASE_URL=""
+
+# Clerk Keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
+
+# Clerk Routing URLs
+NEXT_PUBLIC_CLERK_SIGN_IN_URL="" 
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=""
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=""
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=""
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🙌 Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-## Learn More
+1. Fork the repo  
+2. Create your feature branch (`git checkout -b feature/foo`)  
+3. Commit your changes (`git commit -am 'Add some foo'`)  
+4. Push to the branch (`git push origin feature/foo`)  
+5. Open a PR
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Designed and built by [**Chirag Sharma**](https://github.com/chiraagsharma24)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
