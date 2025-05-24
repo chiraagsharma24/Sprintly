@@ -3,6 +3,7 @@ import OrgSwitcher from "@/components/org-switcher";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import ProjectList from "./_components/project-list";
+import UserIssues from "./_components/user-issues";
 
 export default async function OrganizationPage({ params }) {
 
@@ -33,7 +34,7 @@ export default async function OrganizationPage({ params }) {
         <ProjectList orgId={organization.id} />
       </div>
       <div className="mt-8">
-        {/* <UserIssues userId={userId} /> */}
+        <UserIssues userId={userId} />
       </div>
     </div>
   );

@@ -87,11 +87,12 @@ export default function IssueCreationDrawer({
 
   return (
     <Drawer open={isOpen} onClose={onClose}>
-      <DrawerContent>
+      <DrawerContent className="max-h-screen flex flex-col">
         <DrawerHeader>
           <DrawerTitle>Create New Issue</DrawerTitle>
         </DrawerHeader>
         {usersLoading && <BarLoader width={"100%"} color="#36d7b7" />}
+        <div className="overflow-y-auto px-4 flex-1">
         <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-4">
           <div>
             <label htmlFor="title" className="block text-sm font-medium mb-1">
@@ -194,6 +195,7 @@ export default function IssueCreationDrawer({
             {createIssueLoading ? "Creating..." : "Create Issue"}
           </Button>
         </form>
+        </div>
       </DrawerContent>
     </Drawer>
   );

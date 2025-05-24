@@ -46,7 +46,7 @@ export default function SprintCreationForm({
   } = useForm({
     resolver: zodResolver(sprintSchema),
     defaultValues: {
-      name: `${projectKey}-${sprintKey}`,
+      name: "",
       startDate: dateRange.from,
       endDate: dateRange.to,
     },
@@ -93,7 +93,7 @@ export default function SprintCreationForm({
                 <Input
                   id="name"
                   {...register("name")}
-                  readOnly
+                  placeholder="Enter sprint name"
                   className="bg-slate-950"
                 />
                 {errors.name && (
