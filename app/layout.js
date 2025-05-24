@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { shadesOfPurple } from "@clerk/themes";
 import { Toaster } from "@/components/ui/sonner";
+import { Github } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,7 +56,18 @@ export default function RootLayout({ children }) {
           {/* Footer */}
           <footer className="py-12 bg-gray-900">
             <div className="container text-center text-gray-200 mx-auto px-4">
-              Developed and designed by <span className="font-semibold">Chirag Sharma</span>
+              <p>
+                Developed and designed by <span className="font-semibold">Chirag Sharma</span>
+              </p>
+              <a
+                href="https://github.com/chiraagsharma24/Sprintly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center mt-2 text-gray-400 hover:text-white transition-colors"
+              >
+                <Github className="w-5 h-5 mr-1" />
+                <span>View Source Code</span>
+              </a>
             </div>
           </footer>
           </ThemeProvider>
