@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import UserMenu from "./user-menu";
-import { PenBox } from "lucide-react";
+import { ChartNoAxesGantt, PenBox } from "lucide-react";
 import Image from "next/image";
 import UserLoading from "./user-loading";
 import { checkUser } from "@/lib/checkUser";
@@ -26,6 +26,12 @@ async function Header() {
           </div>
         </Link>
         <div className="flex items-center gap-4">
+          <Link href="/onboarding">
+            <Button variant="default" className="flex items-center gap-2">
+              <ChartNoAxesGantt size={18} />
+              <span className="hidden md:inline">My Organizations</span>
+            </Button>
+          </Link>
           <Link href="/project/create">
             <Button variant="destructive" className="flex items-center gap-2">
               <PenBox size={18} />

@@ -51,7 +51,7 @@ export default function IssueCard({
         onClick={() => setIsDialogOpen(true)}
       >
         <CardHeader
-          className={`border-t-2 ${priorityColor[issue.priority]} rounded-lg`}
+          className={`border-t-2 pt-4 ${priorityColor[issue.priority]} rounded-lg`}
         >
           <CardTitle>{issue.title}</CardTitle>
         </CardHeader>
