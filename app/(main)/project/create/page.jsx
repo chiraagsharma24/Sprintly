@@ -70,7 +70,7 @@ export default function CreateProjectPage() {
   }
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10 px-8">
       <h1 className="text-6xl text-center font-bold mb-8 gradient-title">
         Create New Project
       </h1>
