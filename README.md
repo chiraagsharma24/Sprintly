@@ -13,7 +13,7 @@ Sprintly simplifies how you manage tasks, sprints, and organizations. Whether yo
 -----
 
 ### 🎥 Recorded Demo Video
-[Watch the demo](https://your-demo-video-link.com)
+[Watch the demo](https://drive.google.com/drive/folders/1eKLu9DcZhR5Dd6UfrprsHXPhtDv4D3pP?usp=sharing)
 
 ---
 
