@@ -26,18 +26,20 @@ async function Header() {
           </div>
         </Link>
         <div className="flex items-center gap-4">
-          <Link href="/onboarding">
-            <Button variant="default" className="flex items-center gap-2">
-              <ChartNoAxesGantt size={18} />
-              <span className="hidden md:inline">My Organizations</span>
-            </Button>
-          </Link>
-          <Link href="/project/create">
-            <Button variant="destructive" className="flex items-center gap-2">
-              <PenBox size={18} />
-              <span className="hidden md:inline">Create Project</span>
-            </Button>
-          </Link>
+          <SignedIn>
+            <Link href="/onboarding">
+              <Button variant="default" className="flex items-center gap-2">
+                <ChartNoAxesGantt size={18} />
+                <span className="hidden md:inline">My Organizations</span>
+              </Button>
+            </Link>
+            <Link href="/project/create">
+              <Button variant="destructive" className="flex items-center gap-2">
+                <PenBox size={18} />
+                <span className="hidden md:inline">Create Project</span>
+              </Button>
+            </Link>
+          </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/onboarding">
               <Button variant="outline">Login</Button>
